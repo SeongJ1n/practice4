@@ -54,17 +54,19 @@ body {
   background-color: #e3e3e3;
 }
 
-.my-task {
+.task-container {
   width: 400px;
-  height: 45px;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.my-task {
+  height: 45px;
   border-radius: 4px;
   background-color: #21a5b8;
 }
 
-.my-task h1 {
+.my-task .title {
   font-size: 16px;
   font-weight: 700;
   line-height: 48px;
@@ -74,16 +76,13 @@ body {
 }
 
 .wrap-title {
-  width: 400px;
-  margin: 0 auto;
+  margin-top: 16px;
 }
 
 .list-title {
   font-size: 14px;
   font-weight: 900;
   color: #21a5b8;
-  margin-bottom: 8px;
-  margin-left: 2px;
 }
 
 .list-title-num {
@@ -92,8 +91,7 @@ body {
 }
 
 .list {
-  width: 400px;
-  margin: 0 auto 20px;
+  margin-top: 8px;
   border-radius: 4px;
   background-color: white;
   border: 1px solid #e3e3e3;
@@ -121,8 +119,6 @@ body {
 .list-item .list-item-title {
   font-size: 16px;
   font-weight: 900;
-  margin-top: 2px;
-  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
@@ -130,17 +126,48 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.3em;
-  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .list-item .list-item-time {
+  display: block;
   font-size: 11px;
   font-weight: 200;
+  margin-top: 8px;
   color: #777;
 }
 
+@media screen and (max-width:600px){
+  .task-container { width: 100%; margin-top: 0px; }
+  .my-task, .list { border-radius: 0px; }
+  .wrap-title { padding-left: 8px; }
+}
 
+.img-container {
+  position: relative;
+  height: 600px;
+  margin-top: 30px;
+  background-color: #ccc;
+  text-align: center;
+}
 
+.img-container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
 
+.img-container .img-teemo {
+  display: inline-block;
+  vertical-align: middle;
+
+  /*
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  */
+}
 
 
